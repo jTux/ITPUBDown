@@ -9,7 +9,7 @@
 $(document).ready(function(){
 	$('ignore_js_op').find('a').click(function(){
 		var downloadLink = $(this).attr('href');
-        var reg = /(?:attachment\.php\?aid\=)(\w{48})/i
+        var reg = /(?:attachment\.php\?aid\=)(\w{55}|\w{48})/i
 		var result = reg.exec(downloadLink);
 		if (result != null) {
 			var fileId = result[1];
